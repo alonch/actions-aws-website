@@ -17,3 +17,8 @@ output "cloudfront_distribution_id" {
 output "domain" {
   value = var.domain
 }
+
+output "api_gateway_url" {
+  value       = aws_apigatewayv2_stage.main.invoke_url
+  description = "The URL of the API Gateway endpoint"
+}
